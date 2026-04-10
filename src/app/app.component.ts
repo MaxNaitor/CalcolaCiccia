@@ -63,7 +63,7 @@ export class AppComponent {
   formatValue(value: number): string {
     return new Intl.NumberFormat('it-IT', {
       minimumFractionDigits: 0,
-      maximumFractionDigits: 2
+      maximumFractionDigits: 3
     }).format(value);
   }
 }
