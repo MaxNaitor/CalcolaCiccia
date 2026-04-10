@@ -1,0 +1,36 @@
+<main class="page">
+  <section class="card">
+    <h1>CalcolaCiccia</h1>
+    <p>Inserisci un numero e calcola i valori richiesti.</p>
+
+    <label for="numero">Numero</label>
+    <input id="numero" type="number" [(ngModel)]="inputValue" placeholder="Es. 100" />
+
+    <div class="actions">
+      <button type="button" (click)="calcolaBase()">Calcola</button>
+      <button type="button" class="secondary" (click)="toggleAltri()">
+        {{ showExtras ? 'Nascondi Altri' : 'Altri' }}
+      </button>
+    </div>
+
+    <section *ngIf="baseResults.length > 0" class="results">
+      <h2>Risultati principali</h2>
+      <ul>
+        <li *ngFor="let item of baseResults">
+          <span>{{ item.label }}</span>
+          <strong>{{ formatValue(item.value) }}</strong>
+        </li>
+      </ul>
+    </section>
+
+    <section *ngIf="showExtras && extraResults.length > 0" class="results">
+      <h2>Altri risultati</h2>
+      <ul>
+        <li *ngFor="let item of extraResults">
+          <span>{{ item.label }}</span>
+          <strong>{{ formatValue(item.value) }}</strong>
+        </li>
+      </ul>
+    </section>
+  </section>
+</main>

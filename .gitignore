@@ -1,0 +1,14 @@
+/.angular/
+/.vscode/
+/node_modules
+/dist
+/tmp
+/out-tsc
+
+# IDE
+.idea/
+*.iml
+
+# System
+.DS_Store
+Thumbs.db
