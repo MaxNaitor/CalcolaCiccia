@@ -4,6 +4,8 @@
   --ink: #34251b;
   --accent: #bf4f26;
   --accent-2: #e98f4f;
+  --accent-deep: #8f3414;
+  --accent-edge: #f3ae36;
   --card: rgba(255, 255, 255, 0.9);
 }
 
@@ -72,11 +74,14 @@ button {
   border: 0;
   border-radius: 999px;
   padding: 10px 18px;
+  min-width: 110px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   color: white;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+  border: 2px solid var(--accent-edge);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
