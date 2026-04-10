@@ -34,3 +34,10 @@ Il repository e gia configurato per il deploy automatico con GitHub Actions.
 URL finale:
 
 https://maxnaitor.github.io/CalcolaCiccia/
+
+## Se vedi il README invece dell'app
+
+1. Verifica in Settings > Pages che Source sia GitHub Actions.
+2. Vai nella tab Actions e controlla il workflow Deploy to GitHub Pages.
+3. Se era fallito, rifai un push su main oppure avvialo con Run workflow.
+4. Aspetta 1-2 minuti e ricarica la pagina con hard refresh.
